@@ -1,0 +1,5 @@
+FROM openjdk:11
+
+COPY ./target/ccpinvesting-api-0.0.1-SNAPSHOT.jar ccpinvesting-api-0.0.1-SNAPSHOT.jar
+
+CMD ["java","-jar","ccpinvesting-api-0.0.1-SNAPSHOT.jar"]

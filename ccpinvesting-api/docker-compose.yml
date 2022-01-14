@@ -1,0 +1,35 @@
+version: "3"
+services:
+  ccpinvesting-api :
+    build: .
+    image: "ccpinvesting-api:latest"
+    container_name: ccpinvesting-container
+    ports:
+      - "8000:8080"
+    depends_on:
+      mysqldb:
+        condition: service_healthy  
+    networks:
+      - ccp
+   
+
+  mysqldb:
+    image: mysql:8
+    networks:
+      - ccp
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: bootdb
+    ports: 
+      - "3307:3306"
+    volumes: 
+      - "database:/var/lib/mysql"
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+       
+networks:
+  ccp:
+volumes:
+  database:

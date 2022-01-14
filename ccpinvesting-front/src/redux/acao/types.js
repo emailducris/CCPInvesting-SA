@@ -1,0 +1,8 @@
+export const ARMAZENAR_ACAO = 'GUARDAR_ACAO';
+export const SETAR_ACAO_ATUAL = 'SETAR_ACAO_ATUAL';
+
+export const BUSCAR_ACOES = 'BUSCAR_ACOES';
+export const BUSCAR_ACAO_POR_ID = 'BUSCAR_ACAO_POR_ID';
+export const ATUALIZAR_ACAO = 'ATUALIZAR_ACAO'
+export const EXCLUIR_ACAO = 'EXCLUIR_ACAO';
+export const INCLUIR_ACAO = 'INCLUIR_ACAO';

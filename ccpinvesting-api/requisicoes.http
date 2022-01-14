@@ -1,0 +1,31 @@
+GET http://localhost:8080/investidor
+
+POST http://localhost:8080/investidor
+content-type: application/json
+
+[
+  {
+    "nome": "Maria",
+    "sobrenome": "Jane",
+    "cpf": "22345678910",
+    "email": "mariJane@email.com",
+    "celular": "(48)88888-9999",
+    "nascimento": "1994-03-13T03:00:00.000+00:00",
+    "investimento": [],
+    "endereco": null,
+    "contaBancaria": []
+  }
+]
+
+GET http://localhost:8080/acao
+
+POST http://localhost:8080/acao
+content-type: application/json
+
+[
+  {
+    "nome": "VALE3",
+    "preco": 115.05 ,
+    "descricao": "Vale S.A."
+  }
+]
